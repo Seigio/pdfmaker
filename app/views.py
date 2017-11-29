@@ -14,7 +14,7 @@ def test_send():
 
 @app.route('/cut_pdf/<int:start>/<int:end>')
 def test_cut(start, end):
-    ipdf = PdfReader('../pdfs/book.pdf')
+    ipdf = PdfReader('book.pdf')
     opdf = PdfWriter()
     for i in range(start, end):
         opdf.addpage(ipdf.pages[i])
